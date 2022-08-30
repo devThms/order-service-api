@@ -3,7 +3,7 @@ import { MinLength, MaxLength } from 'class-validator';
 import { Status } from '../../common/status.enum';
 
 // Model-Relations
-//import { User } from '../../user/local/user.entity';
+import { User } from '../../user/local/user.entity';
 
 @Entity('roles')
 export class Role {
@@ -32,9 +32,9 @@ export class Role {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-//   @OneToMany(
-//     type => User,
-//     user => user.role
-//   )
-//   users: User[];
+  @OneToMany(
+    type => User,
+    user => user.role
+  )
+  users: User[];
 }

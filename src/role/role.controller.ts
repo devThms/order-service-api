@@ -4,7 +4,7 @@ import { Role } from './local/role.entity';
 // import { AuthGuard } from '@nestjs/passport';
 
 // @UseGuards(AuthGuard('jwt'))
-@Controller('role')
+@Controller('roles')
 export class RoleController {
 
     /**
